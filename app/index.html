@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FundingHub - Not Default Truffle App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <br>
+  <h1>Total Projects Created</h1>
+  <br>There are <label id="totalProjects"></label> projects created
+  <br><br>
+  <span></span>
+
+  <br>
+  <h1>Create Project</h1>
+  <br><label>Project Description</label><input type="text" id="description" placeholder="e.g., to raise funds for education"></input>
+  <br><label>Campaign Goal (Finney)</label><input type="text" id="goal" placeholder="e.g., 10"></input>
+  <br><label>Campaign Durations (Minutes)</label><input type="text" id="duration" placeholder="e.g., 60"></input>
+  <br><br><button id="createProject" onclick="createProject()">Create Project</button>
+  <br><br>
+  <span id="statusProjectCreation"></span>
+
+  <br>
+  <h1>Contribute Project</h1>
+  <br><label>Project:</label>
+  <div id="projectList">
+  </div>
+  <br><label>Amount (Finney):</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+  <br><br><button id="contribute" onclick="contribute()">Contribute</button>
+  <br><br>
+  <span id="statusContribution"></span>
+</body>
+</html>
