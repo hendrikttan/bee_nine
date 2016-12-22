@@ -140,9 +140,7 @@ function contribute() {
   var selectedProject = document.getElementById("selectedProject");
   var selectedProjectAddress = selectedProject.options[selectedProject.selectedIndex].value;
   var amount = getElementByIdValue("amount");
-  alert("selectedProjectAddress:[" + selectedProjectAddress + "]: " + amount);
   fundinghub.contribute(selectedProjectAddress, {from: accounts[1], value: web3.toWei(amount, "finney")}).then(function(result) {
-    alert("contributeProjectResult: " + result);
     log("contributeProjectResult: " + result);
     checkTransaction("contributeProjectResult", result);
   });
